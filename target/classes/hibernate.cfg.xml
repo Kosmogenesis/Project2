@@ -37,8 +37,7 @@
   	<mapping class ="com.revature.models.Users"/>
   	<mapping class ="com.revature.models.Cards"/>
   	<mapping class ="com.revature.models.Subject"/>
-  	<mapping class ="com.revature.models.ReimbursementStatus"/>
-  	<mapping class ="com.revature.models.ReimbursementType"/>
+  	<mapping class ="com.revature.models.Status"/>
   	
   	<!-- <mapping class ="com.revature.models.*"/> to get all tables -->
   	
