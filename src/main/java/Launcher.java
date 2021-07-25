@@ -21,10 +21,6 @@ public class Launcher {
 		Users u =new Users();
 		
 		
-		
-		
-
-		
 		//create card objects
 		Cards c1 = new Cards();
 		Cards c2 = new Cards();

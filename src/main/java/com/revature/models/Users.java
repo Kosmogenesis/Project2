@@ -1,5 +1,7 @@
 package com.revature.models;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -9,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -39,6 +42,9 @@ import javax.persistence.Table;
 		@ManyToOne(fetch = FetchType.EAGER)
 		@JoinColumn(name = "card_id")
 		private Cards card_id;
+		
+//		@ManyToMany
+//		private Collection<Cards> cards = new ArrayList<Cards>();
 
 		public Users() {
 			super();
