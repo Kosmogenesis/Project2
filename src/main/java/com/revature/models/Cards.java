@@ -86,6 +86,11 @@ public Cards(String name, String question, String answer, Users userId, Status s
 	this.subject = subject;
 }
 
+public Cards(int id) {
+	super();
+	this.id = id;
+}
+
 @Override
 public String toString() {
 	return "Cards [id=" + id + ", name=" + name + ", question=" + question + ", answer=" + answer + ", userId=" + userId
