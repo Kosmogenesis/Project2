@@ -9,6 +9,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 
 
 
@@ -21,12 +24,17 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
     LoginComponent,
     SignupComponent,
     AboutusComponent
+    
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ButtonsModule,
+    BsDropdownModule
+  
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
