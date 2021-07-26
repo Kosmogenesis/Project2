@@ -65,12 +65,13 @@ public class Launcher {
 		statDAO.addStatus(stat2);
 		statDAO.addStatus(stat3);
 		
-		Cards c1 = new Cards("Basic Math", "What is 2+2?", "4", u1, stat1, sub1);
-		Cards c2 = new Cards("Basic History", "When did WW2 end?", "1945", u2, stat2, sub2);
-		Cards c3 = new Cards("Basic History", "Who was the first U.S President?", "George Washington", u2, stat1, sub2);
-		Cards c4 = new Cards("Basic CS", "What are the 4 pillars of OOP>", "Inheritance, Abstraction, Encapsulation, Polymorphism", u1, stat1, sub3);
-		Cards c5 = new Cards("Calculus", "What is the derivative of e^x?", "e^x", u2, stat1, sub1);
-		Cards c6 = new Cards("Basic CS", "True or False: Strings are objects in Java?", "True", u2, stat3, sub3);
+		Cards c1 = new Cards(1, "Basic Math", "What is 2+2?", "4", u1, stat1, sub1);
+		Cards c2 = new Cards(1, "Basic Math", "What is 2+2?", "4", u2, stat1, sub1);
+		Cards c3 = new Cards(2, "Basic History", "When did WW2 end?", "1945", u2, stat2, sub2);
+		Cards c4 = new Cards(3, "Basic History", "Who was the first U.S President?", "George Washington", u2, stat1, sub2);
+		Cards c5 = new Cards(4, "Basic CS", "What are the 4 pillars of OOP>", "Inheritance, Abstraction, Encapsulation, Polymorphism", u1, stat1, sub3);
+		Cards c6 = new Cards(5, "Calculus", "What is the derivative of e^x?", "e^x", u2, stat1, sub1);
+		Cards c7 = new Cards(6, "Basic CS", "True or False: Strings are objects in Java?", "True", u2, stat3, sub3);
 				
 		//add roles
 		cDAO.addCards(c1);
@@ -79,6 +80,7 @@ public class Launcher {
 		cDAO.addCards(c4);
 		cDAO.addCards(c5);
 		cDAO.addCards(c6);
+		cDAO.addCards(c7);
 		
 		
 		
