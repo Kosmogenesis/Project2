@@ -3,12 +3,13 @@ package com.revature.servlet;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.revature.controllers.LoginController;
 
-public class MasterServlet {
+public class MasterServlet extends HttpServlet {
 	private LoginController lc = new LoginController();
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

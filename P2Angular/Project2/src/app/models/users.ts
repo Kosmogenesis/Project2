@@ -16,5 +16,14 @@ export class Users {
          public email: string,
          public card_id: object
        
-    ) {}
+    ) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.card_id = card_id;
+
+    }
 }
