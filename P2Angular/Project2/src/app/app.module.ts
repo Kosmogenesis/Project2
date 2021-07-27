@@ -12,6 +12,8 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -26,6 +28,7 @@ import { AuthModule } from './auth/auth.module';
     SignupComponent,
     AboutusComponent
     
+    
    
   ],
   imports: [
@@ -34,7 +37,8 @@ import { AuthModule } from './auth/auth.module';
     BrowserAnimationsModule,
     ButtonsModule,
     BsDropdownModule,
-    AuthModule
+    AuthModule,
+    HttpClientModule
   
     
   ],
