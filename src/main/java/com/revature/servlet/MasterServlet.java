@@ -36,6 +36,14 @@ public class MasterServlet extends HttpServlet {
 			break;
 		}
 		
+		case "getAllUsers": {
+			
+		}
+		
+		case "getAllCards": {
+			
+		}
+		
 		
 		}
 				
