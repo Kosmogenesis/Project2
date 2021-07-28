@@ -70,6 +70,13 @@ public class UserDAO {
 		return userList;
 		
 	}
+	
+	public Users getUserByUsernamePassword(String username, String password) {
+		Session ses = HibernateUtil.getSession();
+		Users user = (Users) ses.get(username, password);
+		HibernateUtil.closeSession();
+		return user;
+	}
 
 
 	
