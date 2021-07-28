@@ -13,9 +13,17 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
+
+
+
+
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+
+
 // import { LoginPageComponent } from './components/login-page/login-page.component';
 // import { LoginBoxComponent } from './components/login-box/login-box.component';
+
 
 
 
@@ -31,9 +39,17 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     LoginComponent,
     SignupComponent,
+
+    AboutusComponent,
+    HomeComponent
+    
+    
+   
+
     AboutusComponent
     // LoginPageComponent,
     // LoginBoxComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -43,8 +59,15 @@ import { FormsModule } from '@angular/forms';
     BsDropdownModule,
     AuthModule,
     HttpClientModule,
-    //LoginBoxComponent
+
     FormsModule
+
+    //LoginBoxComponent
+
+    FormsModule
+=======
+
+
   
     
   ],
