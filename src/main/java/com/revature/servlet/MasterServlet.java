@@ -8,9 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.revature.controllers.LoginController;
+import com.revature.controllers.UserController;
 
 public class MasterServlet extends HttpServlet {
 	private LoginController lc = new LoginController();
+	private UserController uc = new UserController();
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		res.setContentType("application/json"); //set the content of our resposne object to be JSON
@@ -37,7 +39,8 @@ public class MasterServlet extends HttpServlet {
 		}
 		
 		case "getAllUsers": {
-			
+			uc.getAllUsers(req, res);
+			break;
 		}
 		
 		case "getAllCards": {
