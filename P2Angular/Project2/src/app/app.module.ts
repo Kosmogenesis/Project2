@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
+//import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { LoginBoxComponent } from './components/login-box/login-box.component';
+
+
 
 
 
@@ -24,9 +28,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     WelcomeComponent,
     NavbarComponent,
-    LoginComponent,
+   // LoginComponent,
     SignupComponent,
-    AboutusComponent
+    AboutusComponent,
+    LoginPageComponent,
+    LoginBoxComponent,
+    
     
     
    
