@@ -13,7 +13,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     LoginComponent,
     SignupComponent,
-    AboutusComponent
+    AboutusComponent,
+    HomeComponent
     
     
    
@@ -38,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonsModule,
     BsDropdownModule,
     AuthModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   
     
   ],
