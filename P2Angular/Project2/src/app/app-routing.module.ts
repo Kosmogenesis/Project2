@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 //import { LoginBoxComponent } from './components/login-box/login-box.component';
 
 import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 
@@ -40,6 +41,11 @@ const routes: Routes = [
   {
     path:'home', //the empty String makes this component appear given the base URL (on launch)
     component:HomeComponent //so when I go to localhost:4200, we'll get this component
+  },
+  
+  {
+    path:'logout', //the empty String makes this component appear given the base URL (on launch)
+    component:LogoutComponent //so when I go to localhost:4200, we'll get this component
    }
 ];
 

@@ -19,6 +19,11 @@ export class LoginService {
   dbUser!: Users;
 
   constructor(private http: HttpClient) { }
+  isUserLoggedIn() {
+    let user = sessionStorage.getItem('username')
+    console.log(!(user === null))
+    return !(user === null)
+  }
   
 
 validLoginUser(user:object): Observable<Users>{
@@ -36,4 +41,6 @@ getUser(): Users{
   getUserById(id: number): Observable<Users>{
     return this.http.get<Users>("http://localhost:8080/Project2/user/id?id=" + id, HTTP_OPTIONS);
   }
+
+ 
 }

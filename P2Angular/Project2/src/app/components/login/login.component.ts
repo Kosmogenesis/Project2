@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
         //this.dbUser = succ;
         //this.incorrect = false;
         //this.loginService.saveUser(succ);
+        sessionStorage.setItem('username', this.username)
         this.ROUTE.navigate(['home']);
       }, err => {
         console.log('login failed')
@@ -59,6 +60,25 @@ export class LoginComponent implements OnInit {
       }
       );
   }
+
+  isUserLoggedIn() {
+    let user = sessionStorage.getItem('username')
+    console.log(!(user === null))
+    return !(user === null)
+  }
+
+  logOut() {
+    sessionStorage.removeItem('username')
+  }
+
+  //  checkLogin() {
+  //   if (this.LoginService.authenticate(this.username, this.password)
+  //   ) {
+  //     this.router.navigate([''])
+  //     this.invalidLogin = false
+  //   } else
+  //     this.invalidLogin = true
+  // }
 
 
 

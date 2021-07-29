@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 // import { LoginPageComponent } from './components/login-page/login-page.component';
@@ -41,7 +42,8 @@ import { HomeComponent } from './components/home/home.component';
     SignupComponent,
 
     AboutusComponent,
-    HomeComponent
+    HomeComponent,
+    LogoutComponent
     
     
    
