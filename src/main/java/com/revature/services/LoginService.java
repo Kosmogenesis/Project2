@@ -2,6 +2,7 @@ package com.revature.services;
 
 import java.util.List;
 
+import com.revature.daos.LoginDAO;
 import com.revature.daos.UserDAO;
 import com.revature.models.Users;
 
@@ -9,6 +10,7 @@ public class LoginService {
 
 public int login(String username, String password) {
 		
+	
 		
 		 
 		
@@ -28,3 +30,17 @@ public int login(String username, String password) {
 		return -1;
 	}
 }
+
+
+
+//LoginDAO lDAO = new LoginDAO();
+//public boolean login2(String username, String password) {
+//	//Users u = lDAO.getUserPass(username, password);
+//	if(username.equals(lDAO.getUserPass(username, password))) {
+//		return true;
+//	} 
+//	
+//		return false;
+//	}
+//}
+

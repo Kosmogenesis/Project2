@@ -55,7 +55,7 @@ public class SubjectDAO {
 
 
 	
-	public List<Subject> getAllSubject() {
+	public List<Subject> getAllSubjects() {
 		Session ses = HibernateUtil.getSession();
 		
 		//Using HQL! Hibernate Query Language it references the Java class, not the DB table

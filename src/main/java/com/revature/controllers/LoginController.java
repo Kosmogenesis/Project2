@@ -13,12 +13,14 @@ import com.revature.daos.UserDAO;
 import com.revature.models.Users;
 
 import com.revature.services.LoginService;
+import com.revature.services.UserService;
 
 
 
 public class LoginController {
 	ObjectMapper om = new ObjectMapper(); //so we can work with JSON
 	private LoginService ls = new LoginService();
+	private UserService us = new UserService();
 
 	private UserDAO uDao = new UserDAO();
 	private Users author = new Users();
@@ -73,7 +75,11 @@ public void login(HttpServletRequest req, HttpServletResponse res) throws IOExce
 
 				HttpSession ses = req.getSession(); //return a Session to hold user info (if one doesn't exist yet)
 				//remember, sessions are how you remember the different users on the client
-	
+				res.setStatus(200);
+				
+//				Users user = us.validateUser(lDTO.username, lDTO.password);
+//				String json = om.writeValueAsString(user);
+//				res.getWriter().print(json);
 			
 //				
 //					Cookie[] cookies = req.getCookies();
@@ -89,7 +95,7 @@ public void login(HttpServletRequest req, HttpServletResponse res) throws IOExce
 				ses.setAttribute("loggedin", true);
 				
 		
-				res.setStatus(200); //because login was successful
+				//res.setStatus(200); //because login was successful
 				//res.getWriter().print("Hi Login was successful"); //we won't see this message anywhere but postman
 
 				

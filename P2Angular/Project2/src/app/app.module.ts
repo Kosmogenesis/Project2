@@ -46,7 +46,7 @@ import { HomeComponent } from './components/home/home.component';
     
    
 
-    AboutusComponent
+    
     // LoginPageComponent,
     // LoginBoxComponent,
     
@@ -64,8 +64,7 @@ import { HomeComponent } from './components/home/home.component';
 
     //LoginBoxComponent
 
-    FormsModule
-=======
+    
 
 
   

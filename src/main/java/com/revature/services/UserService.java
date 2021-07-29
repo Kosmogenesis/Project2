@@ -18,4 +18,8 @@ public class UserService {
 	{
 		return uDAO.getAllUsers();
 	}
+	
+//	public Users getUsers(String username) {
+//		return uDAO.getUser
+//	}
 }

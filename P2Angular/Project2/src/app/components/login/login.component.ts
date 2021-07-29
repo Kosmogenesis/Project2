@@ -1,4 +1,3 @@
-
 import { Component, OnInit, Input } from '@angular/core';
 import { Users } from 'src/app/models/users';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
@@ -11,8 +10,7 @@ const HTTP_OPTIONS = {
   })}
 
 
-import { Component, OnInit } from '@angular/core';
-import { Users } from 'src/app/models/users';
+
 
 
 @Component({
@@ -31,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   // dbUser!: Users;
   // validateUser: Users;
-  constructor() { }
+ 
 
 
   ngOnInit(): void {
@@ -41,9 +39,10 @@ export class LoginComponent implements OnInit {
   loginNow() {
     //console.log(this.validateUser);
     //this.loginUser(this.validateUser);
+    console.log(this.username)
     let validateUser = {
-      username: "Mary_Jane",
-      password: "Mary2021"
+      username: this.username,
+      password: this.password
     }
     this.loginService.validLoginUser(validateUser).subscribe(
       succ => {
@@ -71,6 +70,3 @@ export class LoginComponent implements OnInit {
 
 
 }
-
-
-

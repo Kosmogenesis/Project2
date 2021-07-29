@@ -21,13 +21,13 @@ export class LoginService {
   constructor(private http: HttpClient) { }
   
 
-  validLoginUser(user:object): Observable<Users>{
-    return this.http.post<Users>("http://localhost:8080/Project2/login", user, HTTP_OPTIONS);
-  }
+validLoginUser(user:object): Observable<Users>{
+  return this.http.post<Users>("http://localhost:8080/Project2/login", user, HTTP_OPTIONS);
+}
 
-  getUser(): Users{
-    return this.dbUser;
-  }
+getUser(): Users{
+  return this.dbUser;
+}
   
   saveUser(save: Users): void{
     this.dbUser = save;

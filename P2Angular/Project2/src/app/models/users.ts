@@ -1,20 +1,20 @@
 export class Users {
-     id: number;
-     username: string;
-     password: string;
-     firstName: string;
-     lastName: string;
-     email: string;
-     card: object;
+    // id: number;
+    // username: string;
+    // password: string;
+    // firstName: string;
+    // lastName: string;
+    // email: string;
+    // card_id: object;
 		
     constructor(
-          id: number,
-          username: string,
-          password: string,
-          firstName: string,
-          lastName: string,
-          email: string,
-          card: object
+         public id: number,
+         public username: string,
+         public password: string,
+         public firstName: string,
+         public lastName: string,
+         public email: string,
+         public card_id: object
        
     ) {
         this.id = id;
@@ -23,7 +23,7 @@ export class Users {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.card = card;
+        this.card_id = card_id;
 
     }
 }
