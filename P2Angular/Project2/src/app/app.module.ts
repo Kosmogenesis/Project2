@@ -20,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { ViewCardsComponent } from './components/view-cards/view-cards.component';
+import { TakeATestComponent } from './components/take-a-test/take-a-test.component';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 
 // import { LoginPageComponent } from './components/login-page/login-page.component';
@@ -43,7 +46,9 @@ import { LogoutComponent } from './components/logout/logout.component';
 
     AboutusComponent,
     HomeComponent,
-    LogoutComponent
+    LogoutComponent,
+    ViewCardsComponent,
+    TakeATestComponent
     
     
    
@@ -62,7 +67,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     AuthModule,
     HttpClientModule,
 
-    FormsModule
+    FormsModule,
+    AccordionModule
 
     //LoginBoxComponent
 

@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  /* background-image: url("assets/bg.webp"); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom right;
+  background-size: 40%;
+  background-color: rgb(212, 118, 74);
+}

@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
     //console.log(this.validateUser);
     //this.loginUser(this.validateUser);
     console.log(this.username)
+    console.log(this.password)
     let validateUser = {
       username: this.username,
       password: this.password
