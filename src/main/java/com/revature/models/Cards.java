@@ -91,6 +91,14 @@ public Cards(int id) {
 	this.id = id;
 }
 
+public Cards(Subject subject, String name, String question, String answer, Status status) {
+	this.subject=subject;
+	this.name=name;
+	this.question=question;
+	this.answer=answer;
+	this.status=status;
+}
+
 @Override
 public String toString() {
 	return "Cards [id=" + id + ", name=" + name + ", question=" + question + ", answer=" + answer + ", userId=" + userId

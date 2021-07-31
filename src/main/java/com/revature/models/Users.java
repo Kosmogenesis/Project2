@@ -73,6 +73,17 @@ import javax.persistence.Table;
 			this.email = email;
 			this.card_id = card_id;
 		}
+		
+		
+
+		public Users(String username, String password, String firstName, String lastName, String email) {
+			super();
+			this.username = username;
+			this.password = password;
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.email = email;
+		}
 
 		@Override
 		public String toString() {

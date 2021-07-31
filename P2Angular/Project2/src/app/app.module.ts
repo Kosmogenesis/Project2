@@ -23,6 +23,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { ViewCardsComponent } from './components/view-cards/view-cards.component';
 import { TakeATestComponent } from './components/take-a-test/take-a-test.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CreatecardComponent } from './components/createcard/createcard.component';
 
 
 // import { LoginPageComponent } from './components/login-page/login-page.component';
@@ -48,7 +49,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     HomeComponent,
     LogoutComponent,
     ViewCardsComponent,
-    TakeATestComponent
+    TakeATestComponent,
+    CreatecardComponent
     
     
    

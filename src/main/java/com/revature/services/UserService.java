@@ -19,6 +19,10 @@ public class UserService {
 		return uDAO.getAllUsers();
 	}
 	
+	public void addUser(Users user) {
+		 uDAO.addUser(user);
+	}
+	
 //	public Users getUsers(String username) {
 //		return uDAO.getUser
 //	}

@@ -64,8 +64,21 @@ public class MasterServlet extends HttpServlet {
 			break;
 		}
 		
-		
+		case "signup":{
+			uc.SignUpUsers(req, res);
+			break;
 		}
+		
+		case "createcard": {
+			cc.createCard(req, res);
+			break;
+		}
+		}
+		
+		
+		
+		
+		
 				
 		
 	}

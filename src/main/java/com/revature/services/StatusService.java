@@ -12,5 +12,9 @@ public class StatusService {
 		return sDAO.getAllStatuses();
 	}
 	
+	public Status getStatusById(int status_id) {
+		return sDAO.getStatusById(status_id);
+	}
+	
 	
 }

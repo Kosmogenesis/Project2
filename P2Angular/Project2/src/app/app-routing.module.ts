@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { CreatecardComponent } from './components/createcard/createcard.component';
 
 import { HomeComponent } from './components/home/home.component';
 
@@ -58,6 +59,11 @@ const routes: Routes = [
   {
     path:'view-cards', //the empty String makes this component appear given the base URL (on launch)
     component:ViewCardsComponent //so when I go to localhost:4200, we'll get this component
+  },
+  
+  {
+    path:'createcard', //the empty String makes this component appear given the base URL (on launch)
+    component:CreatecardComponent //so when I go to localhost:4200, we'll get this component
    }
 ];
 

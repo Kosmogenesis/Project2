@@ -2,7 +2,9 @@ package com.revature.daos;
 
 import java.util.List;
 
+
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import com.revature.models.Cards;
 import com.revature.models.Users;
@@ -13,8 +15,14 @@ public class CardDAO {
 	public void addCards(Cards newCard) {
 		//Open a hibernate Session object so that we can connect to the database
 		Session ses = HibernateUtil.getSession(); //there is some parallels between ConnectionUtil.getConnection() in JDBC!
+		Transaction tx = ses.beginTransaction();
+		
+		if(!tx.isActive()) {
+			tx.begin();
+		}
 		
 		ses.save(newCard); //use save method to insert into the data base it's a method for Insert fucntionality
+		tx.commit();
 		
 		HibernateUtil.closeSession(); //Close our Session (not super necessary here, but good practice)
 		
@@ -70,4 +78,11 @@ public class CardDAO {
 		return cardList;
 		
 	}
+	
+	
+	
+
+
+
+
 }

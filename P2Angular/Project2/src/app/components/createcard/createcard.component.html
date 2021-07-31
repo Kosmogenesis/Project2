@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-4">
+        <h2>Create a Card!</h2>
+        <form>
+            <div class="mb-3">
+                <label for="cardname" class="form-label">Card Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="name" name="name">
+
+            </div>
+            <div class="mb-3">
+                <label for="cardQuestion" class="form-label">Question</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    [(ngModel)]="question" name="question">
+
+            </div>
+            <div class="mb-3">
+                <label for="cardAnswer" class="form-label">Card Answer</label>
+                <input type="answer" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    [(ngModel)]="answer" name="answer">
+
+            </div>
+            <div class="mb-3">
+                <label for="cardStatus" class="form-label">Status</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    [(ngModel)]="status" name="status">
+
+            </div>
+            <div class="mb-3">
+                <label for="cardSubject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="subject"
+                    name="subject">
+            </div>
+
+           
+            <button type="submit" class="btn btn-primary" (click)="createCard()">Create Your Card!</button>
+        </form>
+    </div>
+</div>
+

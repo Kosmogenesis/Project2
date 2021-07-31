@@ -30,7 +30,8 @@ validLoginUser(user:object): Observable<Users>{
   return this.http.post<Users>("http://localhost:8080/Project2/login", user, HTTP_OPTIONS);
 }
 
-getUser(): Users{
+  getUser(): Users{
+  
   return this.dbUser;
 }
   
