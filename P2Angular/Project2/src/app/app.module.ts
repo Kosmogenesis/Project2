@@ -26,6 +26,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CreatecardComponent } from './components/createcard/createcard.component';
 
 
+
+
 // import { LoginPageComponent } from './components/login-page/login-page.component';
 // import { LoginBoxComponent } from './components/login-box/login-box.component';
 

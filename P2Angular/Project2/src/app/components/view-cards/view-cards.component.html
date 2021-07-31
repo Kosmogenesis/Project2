@@ -1,26 +1,27 @@
-<div class="grid-container">
-
-    <!-- Using the *ngFor structural directive, we can just write this card once! -->
-    <!-- It will populate once for every todo in the todosArray -->
-    <!-- Using [property binding] on the "hidden" property to determine if this element is visible-->
-    <div *ngFor="let card of cards" class="card">
-        <!-- "hiddenToggle" refers to the TS variable -->
-        <div *ngIf = "card.userId.username == usernameNow">
-        <!-- {{String Interpolation}}!! Taking TS values and putting them in our HTML -->
-        <!-- Grabbing these values from the cardsArray -->
-        <!-- <h2>Card #{{card.id}}</h2> -->
-        <h3>Subject: {{card.subject.subjectName}}</h3>
-        <p>Name: {{card.name}}</p>
-        <h4>Question: {{card.question}}</h4>
-        <h4>Answer: {{card.answer}}</h4>
-        <p>Status: {{card.status.status}}</p>
-        <!-- <p>Card Name: {{card.userId.cardName}}</p> -->
+<h1>Your Cards</h1>
+<div *ngFor="let card of cards" class="card">
+    <div *ngIf="card.userId.username == usernameNow">
+        <div class="container">
+            <div class="card-container">
+                <div class="card">
+                    <figure class="front">
+                        <div class="grid-container">
+                            <p>Card Question: {{card.question}}</p>
+                            <p>Card Subject: {{card.subject.subjectName}}</p>
+                            <p>Card Status: {{card.status.status}}</p>
+                        </div>
+                    </figure>
+                    <figure class="back">
+                        <p>Answer: {{card.answer}}</p>
+                    </figure>
+                </div>
+            </div>
         </div>
-
-
     </div>
-
-
-
 </div>
+
+
+
+
+
 

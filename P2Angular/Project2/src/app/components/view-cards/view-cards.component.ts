@@ -8,6 +8,7 @@ import { CardService } from 'src/app/services/card.service';
 
 
 
+
 @Component({
   selector: 'app-view-cards',
   templateUrl: './view-cards.component.html',
@@ -26,6 +27,7 @@ export class ViewCardsComponent implements OnInit {
   ngOnInit(): void {
     this.getCards();
     this.usernameNow
+    
   }
 
   getCards(): void{
