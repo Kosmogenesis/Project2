@@ -5,10 +5,11 @@ import { CreatecardComponent } from './components/createcard/createcard.componen
 
 import { HomeComponent } from './components/home/home.component';
 
-//import { LoginBoxComponent } from './components/login-box/login-box.component';
+
 
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
+// import { QuizComponent } from './components/quiz/quiz.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { TakeATestComponent } from './components/take-a-test/take-a-test.component';
 import { ViewCardsComponent } from './components/view-cards/view-cards.component';
@@ -64,7 +65,12 @@ const routes: Routes = [
   {
     path:'createcard', //the empty String makes this component appear given the base URL (on launch)
     component:CreatecardComponent //so when I go to localhost:4200, we'll get this component
-   }
+  },
+  
+  // {
+  //   path:'quiz', //the empty String makes this component appear given the base URL (on launch)
+  //   component:QuizComponent //so when I go to localhost:4200, we'll get this component
+  //  }
 ];
 
 @NgModule({

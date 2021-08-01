@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 
 
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   
   //  user = this.service.getUser();
 
-  constructor(private service:LoginService) { }
+  constructor(public service:LoginService, private router:Router) { }
 
   ngOnInit(): void {
   }

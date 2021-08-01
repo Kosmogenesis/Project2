@@ -1,3 +1,17 @@
-<h1>Home page coming soon..</h1>
+
 <!-- <p>Welcome back, {{user.username}}!</p> -->
 <!-- <div class="username">Username: {{userDisplayName}}</div> -->
+<h1 style="text-align: center"> Welcome! Browse below to begin studying!</h1>
+<h2 style ="text-align: center" *ngIf="service.isUserLoggedIn()"> <a href="view-cards" style="color: black; text-decoration: underline; ">View Your
+        Cards</a></h2>
+<br>
+
+<h2 style ="text-align: center" *ngIf="service.isUserLoggedIn()" routerLink="active"><a href="createcard" style="color: black; text-decoration: underline; ">Create a
+        Card</a></h2>
+<br>
+
+<h2 style ="text-align: center" *ngIf="service.isUserLoggedIn()"><a href="take-a-test" style="color: black; text-decoration: underline; ">Take A
+        Test</a></h2>
+
+<div class ="titledBackground"></div>
+        

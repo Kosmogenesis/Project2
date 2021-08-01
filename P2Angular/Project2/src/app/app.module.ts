@@ -15,8 +15,6 @@ import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
-
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { LogoutComponent } from './components/logout/logout.component';
@@ -24,17 +22,7 @@ import { ViewCardsComponent } from './components/view-cards/view-cards.component
 import { TakeATestComponent } from './components/take-a-test/take-a-test.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CreatecardComponent } from './components/createcard/createcard.component';
-
-
-
-
-// import { LoginPageComponent } from './components/login-page/login-page.component';
-// import { LoginBoxComponent } from './components/login-box/login-box.component';
-
-
-
-
-
+// import { QuizComponent } from './components/quiz/quiz.component';
 
 
 
@@ -53,6 +41,8 @@ import { CreatecardComponent } from './components/createcard/createcard.componen
     ViewCardsComponent,
     TakeATestComponent,
     CreatecardComponent
+    // QuizComponent,
+   
     
     
    
@@ -70,16 +60,8 @@ import { CreatecardComponent } from './components/createcard/createcard.componen
     BsDropdownModule,
     AuthModule,
     HttpClientModule,
-
     FormsModule,
     AccordionModule
-
-    //LoginBoxComponent
-
-    
-
-
-  
     
   ],
   providers: [],

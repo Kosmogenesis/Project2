@@ -1,0 +1,100 @@
+<!-- <div class ="container p-5">
+    <div class ="row">
+        <div class = "col-sm-8 offset-2">
+            <p class="text-center">{{currentQuiz +1}} of {{quizzes.length}}</p>
+            <h1>{{quizzes[currentQuiz].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer">
+                <label>
+                <li class="list-group-item" appBackground [correctAnswer] = "quiz.correct">
+                    <input type = "radio" name = "options" (change) = "onAnswer(quiz.correct)" [disabled] ="answerSelected">
+                    {{quiz.option}}</li>
+                </label>
+            </ul>
+            <button class="btn btn-success btn-block" (click)="showResult()">Show Result</button>
+            <div *ngIf="result">
+                Correct Answers: {{correctAnswers}} | Incorrect Answers: {{incorrectAnswers}}
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="container">
+    <div *ngIf="prevAnswered.length < 11">
+        <p class="text-center">{{ prevAnswered.length }} of {{ quizzes.length }}</p>
+        <h1>{{ quizzes[currentQuiz].question }}</h1>
+
+        <div class="answers">
+            <ul class="answers__list" *ngFor="let quiz of quizzes[currentQuiz].answer">
+                <label>
+                    <li @answer class="answers__item" appBackground [correctAnswer]="quiz.correct">
+                        <input type="radio" name="options" (change)="onAnswer(quiz.correct)"
+                            [disabled]="answerSelected">
+                        {{ quiz.option }}
+                    </li>
+                </label>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div *ngIf="prevAnswered.length > 10">
+        <button class="btn" (click)="showResult()" *ngIf="resultStatus === 'Show Result'">{{ resultStatus }}</button>
+        <button class="btn btn--new" (click)="playAgain()" *ngIf="resultStatus !== 'Show Result'">{{ resultStatus
+            }}</button>
+        <div *ngIf="result">
+            Correct Answers: {{ correctAnswers }} | Inocrrect Answers: {{ incorrectAnswers }}
+        </div>
+    </div>
+
+
+</div> -->
+
+<!-- <div class="container">
+    <div id="questions" *ngIf="questions.length > 0 && num < questions.length; else elseBlock ">
+        <h2>Current Score: {{points}}</h2>
+        <h2 [innerHtml]="questions[num].question"></h2>
+        <ul>
+            <li *ngFor="let ans of questions[num].incorrect_answers">
+                <button [innerHtml]="ans" (click)="checkAnswer(questions[num].correct_answer, ans)"></button>
+            </li>
+        </ul>
+    </div>
+    <ng-template #elseBlock>
+        <h2>You Scored: {{points}}</h2>
+        <button (click)="start()">Restart Quiz</button>
+    </ng-template>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+    </div>
+</body>
+
+</html>

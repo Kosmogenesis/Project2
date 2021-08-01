@@ -1,0 +1,9 @@
+.titledBackground {
+  background-image: url(../../../assets/cat2.jpg);
+  background-size: 150%;
+  background-repeat: no-repeat;
+  width: 750px;
+  height: 750px;
+  margin-left: 15%;
+  /* border: 2px solid; */
+}
