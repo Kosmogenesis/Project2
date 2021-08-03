@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CreatecardComponent } from './components/createcard/createcard.component';
+import { GreenComponent } from './components/green/green.component';
 
 import { HomeComponent } from './components/home/home.component';
 
@@ -10,12 +11,15 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginfailedComponent } from './components/loginfailed/loginfailed.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { RedComponent } from './components/red/red.component';
 // import { QuizComponent } from './components/quiz/quiz.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SignupfailedComponent } from './components/signupfailed/signupfailed.component';
+import { StatusroomComponent } from './components/statusroom/statusroom.component';
 import { TakeATestComponent } from './components/take-a-test/take-a-test.component';
 import { ViewCardsComponent } from './components/view-cards/view-cards.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { YellowComponent } from './components/yellow/yellow.component';
 
 
 const routes: Routes = [
@@ -78,6 +82,26 @@ const routes: Routes = [
     path:'signup-failed', //the empty String makes this component appear given the base URL (on launch)
     component:SignupfailedComponent //so when I go to localhost:4200, we'll get this component
   },
+   
+   {
+    path:'green', //the empty String makes this component appear given the base URL (on launch)
+    component:GreenComponent //so when I go to localhost:4200, we'll get this component
+  },
+   
+   {
+    path:'yellow', //the empty String makes this component appear given the base URL (on launch)
+    component:YellowComponent //so when I go to localhost:4200, we'll get this component
+  },
+   
+   {
+    path:'status-room', //the empty String makes this component appear given the base URL (on launch)
+    component:StatusroomComponent //so when I go to localhost:4200, we'll get this component
+  },
+   
+   {
+    path:'red', //the empty String makes this component appear given the base URL (on launch)
+    component:RedComponent //so when I go to localhost:4200, we'll get this component
+  }
   
   // {
   //   path:'quiz', //the empty String makes this component appear given the base URL (on launch)

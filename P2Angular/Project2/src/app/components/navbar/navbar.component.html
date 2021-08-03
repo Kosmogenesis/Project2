@@ -32,7 +32,8 @@
             </a>
             <ul class="dropdown-menu" *dropdownMenu aria-labelledby="navbarDropdown" >
                 <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink="active" routerLink="home">Home</a></li>
-                <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink = "active" routerLink = "view-cards">View Your Cards</a></li>
+                <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink = "active" routerLink = "view-cards">View All Cards</a></li>
+                <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink="active" routerLink="status-room">View Cards By Status</a></li>
                 <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink="active" routerLink="createcard">Create a Card</a></li>
                 <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" href="take-a-test">Take A Test</a></li>
                 <li>

@@ -34,6 +34,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { LoginfailedComponent } from './components/loginfailed/loginfailed.component';
 import { SignupfailedComponent } from './components/signupfailed/signupfailed.component';
+import { StatusroomComponent } from './components/statusroom/statusroom.component';
 
 
 
@@ -56,7 +57,8 @@ import { SignupfailedComponent } from './components/signupfailed/signupfailed.co
     YellowComponent,
     RedComponent,
     LoginfailedComponent,
-    SignupfailedComponent
+    SignupfailedComponent,
+    StatusroomComponent
     // QuizComponent,
     
    

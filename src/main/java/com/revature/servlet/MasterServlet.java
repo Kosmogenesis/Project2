@@ -73,13 +73,85 @@ public class MasterServlet extends HttpServlet {
 			cc.createCard(req, res);
 			break;
 		}
+		
+		case "getCardsByUser1":{
+			cc.getCardsByUser1(req, res);
+			break;
+		}
+		
+		case "getCardsByUser2":{
+			cc.getCardsByUser2(req, res);
+			break;
+		}
+		
+		case "getCardsByUser3":{
+			cc.getCardsByUser3(req, res);
+			break;
+		}
+		
+		case "getGreenCardsByUser1":{
+			cc.getAllGreenCardsByUser1(req, res);
+			break;
+		}
+		
+		case "getGreenCardsByUser2":{
+			cc.getAllGreenCardsByUser2(req, res);
+			break;
+		}
+		
+		case "getGreenCardsByUser3":{
+			cc.getAllGreenCardsByUser3(req, res);
+			break;
+		}
+		
+		case "getYellowCardsByUser1":{
+			cc.getAllYellowCardsByUser1(req, res);
+			break;
+		}
+		
+		case "getYellowCardsByUser2":{
+			cc.getAllYellowCardsByUser2(req, res);
+			break;
+		}
+		
+		case "getYellowCardsByUser3":{
+			cc.getAllYellowCardsByUser3(req, res);
+			break;
+		}
+		
+		case "getRedCardsByUser1":{
+			cc.getAllRedCardsByUser1(req, res);
+			break;
+		}
+		
+		case "getRedCardsByUser2":{
+			cc.getAllRedCardsByUser2(req, res);
+			break;
+		}
+		
+		case "getRedCardsByUser3":{
+			cc.getAllRedCardsByUser3(req, res);
+			break;
+		}
+		
+		case "getAllGreenCards":{
+			cc.getAllGreenCards(req, res);
+			break;
+		}
+		
+		case "getAllYellowCards":{
+			cc.getAllYellowCards(req, res);
+			break;
+		}
+		
+		case "getAllRedCards":{
+			cc.getAllRedCards(req, res);
+			break;
 		}
 		
 		
 		
-		
-		
-				
+		}			
 		
 	}
 	

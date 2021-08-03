@@ -1,6 +1,7 @@
 package com.revature.controllers;
 
 import java.io.BufferedReader;
+
 import java.io.IOException;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.DTO.CardDTO;
 import com.revature.DTO.SignUpDTO;
 import com.revature.models.Cards;
+
 import com.revature.models.Status;
 import com.revature.models.Subject;
 import com.revature.models.Users;
@@ -169,6 +171,202 @@ public class CardController {
 			}
 			
 		}
+	
+//	public void getCardByUserID(HttpServletRequest request, HttpServletResponse response) throws IOException
+//	{
+//		
+//		{
+//			List<Cards> cardList = cs.getCardsByUserId();
+//			
+//			String data = null;
+//	
+//			data = om.writeValueAsString(cardList);
+//	
+//			
+//			response.getWriter().print(data);
+//			response.setStatus(200);
+//		}
+//	}
+	
+	public void getAllGreenCards(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> greenList = cs.getAllGreenCards();
+		
+		String data = null;
+
+		data = om.writeValueAsString(greenList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllYellowCards(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> yellowList = cs.getAllYellowCards();
+		
+		String data = null;
+
+		data = om.writeValueAsString(yellowList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllRedCards(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> redList = cs.getAllRedCards();
+		
+		String data = null;
+
+		data = om.writeValueAsString(redList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getCardsByUser1(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> cardList = cs.getCardsByUser1();
+		
+		String data = null;
+
+		data = om.writeValueAsString(cardList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getCardsByUser2(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> cardList = cs.getCardsByUser2();
+		
+		String data = null;
+
+		data = om.writeValueAsString(cardList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getCardsByUser3(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> cardList = cs.getCardsByUser3();
+		
+		String data = null;
+
+		data = om.writeValueAsString(cardList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllGreenCardsByUser1(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> greenList = cs.getAllGreenCardsByUser1();
+		
+		String data = null;
+
+		data = om.writeValueAsString(greenList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllGreenCardsByUser2(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> greenList = cs.getAllGreenCardsByUser2();
+		
+		String data = null;
+
+		data = om.writeValueAsString(greenList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllGreenCardsByUser3(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> greenList = cs.getAllGreenCardsByUser3();
+		
+		String data = null;
+
+		data = om.writeValueAsString(greenList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllYellowCardsByUser1(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> yellowList = cs.getAllYellowCardsByUser1();
+		
+		String data = null;
+
+		data = om.writeValueAsString(yellowList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllYellowCardsByUser2(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> yellowList = cs.getAllYellowCardsByUser2();
+		
+		String data = null;
+
+		data = om.writeValueAsString(yellowList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllYellowCardsByUser3(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> yellowList = cs.getAllYellowCardsByUser3();
+		
+		String data = null;
+
+		data = om.writeValueAsString(yellowList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllRedCardsByUser1(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> redList = cs.getAllRedCardsByUser1();
+		
+		String data = null;
+
+		data = om.writeValueAsString(redList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllRedCardsByUser2(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> redList = cs.getAllRedCardsByUser2();
+		
+		String data = null;
+
+		data = om.writeValueAsString(redList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	public void getAllRedCardsByUser3(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<Cards> redList = cs.getAllRedCardsByUser3();
+		
+		String data = null;
+
+		data = om.writeValueAsString(redList);
+		
+		response.getWriter().print(data);
+		response.setStatus(200);
+	}
+	
+	
+	
+	
+//	public void getCardsFromUser(HttpServletRequest request, HttpServletResponse response) throws IOException{
+//		List<Cards> cardList = cs.getCardsFromUser();
+//		
+//		String data = null;
+//
+//		data = om.writeValueAsString(cardList);
+//		
+//		response.getWriter().print(data);
+//		response.setStatus(200);
+//	}
+	
 		
 	}
 	

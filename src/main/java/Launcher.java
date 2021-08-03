@@ -72,6 +72,8 @@ public class Launcher {
 		Cards c5 = new Cards(4, "Basic CS", "What are the 4 pillars of OOP>", "Inheritance, Abstraction, Encapsulation, Polymorphism", u1, stat1, sub3);
 		Cards c6 = new Cards(5, "Calculus", "What is the derivative of e^x?", "e^x", u2, stat1, sub1);
 		Cards c7 = new Cards(6, "Basic CS", "True or False: Strings are objects in Java?", "True", u2, stat3, sub3);
+		
+		
 				
 		//add roles
 		cDAO.addCards(c1);

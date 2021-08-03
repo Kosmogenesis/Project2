@@ -24,6 +24,97 @@ export class CardService {
     return this.http.post<Cards>("http://localhost:8080/Project2/createcard", card, HTTP_OPTIONS);
   }
 
+  getCardsByUser1(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getCardsByUser1", HTTP_OPTIONS);
+  }
+
+  getCardsByUser2(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getCardsByUser2", HTTP_OPTIONS);
+  }
+
+  getCardsByUser3(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getCardsByUser3", HTTP_OPTIONS);
+  }
+
+  getAllGreenCards(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllGreenCards", HTTP_OPTIONS);
+  }
+
+   getAllYellowCards(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllYellowCards", HTTP_OPTIONS);
+   }
+  
+   getAllRedCards(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllRedCards", HTTP_OPTIONS);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  getGreenCardsByUser1(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getGreenCardsByUser1", HTTP_OPTIONS);
+  }
+
+   getGreenCardsByUser2(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getGreenCardsByUser2", HTTP_OPTIONS);
+   }
+  
+   getGreenCardsByUser3(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getGreenCardsByUser3", HTTP_OPTIONS);
+   }
+  
+  
+  
+  
+  
+  getYellowCardsByUser1(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getYellowCardsByUser1", HTTP_OPTIONS);
+  }
+
+  getYellowCardsByUser2(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getYellowCardsByUser2", HTTP_OPTIONS);
+  }
+
+  getYellowCardsByUser3(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getYellowCardsByUser3", HTTP_OPTIONS);
+  }
+
+
+
+  getRedCardsByUser1(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getRedCardsByUser1", HTTP_OPTIONS);
+  }
+
+   getRedCardsByUser2(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getRedCardsByUser2", HTTP_OPTIONS);
+   }
+  
+   getRedCardsByUser3(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getRedCardsByUser3", HTTP_OPTIONS);
+  }
+
+ 
   
 
   
