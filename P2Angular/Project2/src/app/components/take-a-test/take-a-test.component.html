@@ -1,1 +1,43 @@
-<h1>Test functionality coming soon...</h1>
+
+
+<h1 style="text-align: center"> Test</h1>
+
+<div class="container">
+    <div class="card-container">
+        <div class="card">
+            <figure class="front">
+                <div class="grid-container">
+                    <h2>Subject: {{card.subject.subjectName}}</h2>
+
+                    <br>
+                    <br>
+                    <br>
+                    <h3>Question: {{card.question}}</h3>
+                    <p>Card Status: {{card.status.status}}</p>
+                    <br>
+                    <br>
+
+                    <p>Hover over the card to reveal the answer</p>
+                </div>
+            </figure>
+            <figure class="back">
+                <h5>Answer: {{card.answer}}</h5>
+            </figure>
+            </div>
+         </div>
+     </div>
+    
+
+<div class="text-center">
+    <button type="button" class="btn btn-primary" (click)="rightCards()">Right</button>
+</div>
+<br>
+<div class="text-center">
+    <button type="button" class="btn btn-danger" (click)="wrongCards()">Wrong</button>
+</div>
+<br>
+
+
+<div class="text-center" *ngIf="!moreQ">
+    <button type="button" class="btn btn-success" (click)="finishCards()">Finished</button>
+</div>

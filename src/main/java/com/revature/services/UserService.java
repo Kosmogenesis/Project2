@@ -20,6 +20,7 @@ public class UserService {
 	}
 	
 	public void addUser(Users user) {
+		//return;
 		 uDAO.addUser(user);
 	}
 	

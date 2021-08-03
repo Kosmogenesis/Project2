@@ -39,20 +39,20 @@
         <h2>Login</h2>
         <form>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Username</label>
-
-              
-
-                <input type="text" class="form-control" id="username"  [(ngModel)]="username" name = "username">
-
-                
+                <label for="exampleInputEmail1" class="form-label">Username
+                    <span class="required-asterisk">*</span>
+                </label>
+                <input required type="text" class="form-control" id="username"  [(ngModel)]="username" name = "username">   
             </div>
+
+
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-
-                <input type="password" class="form-control" id="password" [(ngModel)]="password" name = "password">
+                <label for="exampleInputPassword1" class="form-label">Password
+                    <span class="required-asterisk">*</span>
+                </label>
+                <input required type="password" class="form-control" id="password" [(ngModel)]="password" name = "password">
             </div>
-            
+            <p>* Required fields</p>
             <button type="submit" class="btn btn-primary" (click)="loginNow()">Submit</button>
 
         </form>

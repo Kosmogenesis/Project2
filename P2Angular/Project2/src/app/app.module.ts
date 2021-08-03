@@ -22,7 +22,18 @@ import { ViewCardsComponent } from './components/view-cards/view-cards.component
 import { TakeATestComponent } from './components/take-a-test/take-a-test.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CreatecardComponent } from './components/createcard/createcard.component';
+import { GreenComponent } from './components/green/green.component';
+import { YellowComponent } from './components/yellow/yellow.component';
+import { RedComponent } from './components/red/red.component';
 // import { QuizComponent } from './components/quiz/quiz.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { LoginfailedComponent } from './components/loginfailed/loginfailed.component';
+import { SignupfailedComponent } from './components/signupfailed/signupfailed.component';
 
 
 
@@ -40,8 +51,14 @@ import { CreatecardComponent } from './components/createcard/createcard.componen
     LogoutComponent,
     ViewCardsComponent,
     TakeATestComponent,
-    CreatecardComponent
+    CreatecardComponent,
+    GreenComponent,
+    YellowComponent,
+    RedComponent,
+    LoginfailedComponent,
+    SignupfailedComponent
     // QuizComponent,
+    
    
     
     
@@ -61,7 +78,13 @@ import { CreatecardComponent } from './components/createcard/createcard.componen
     AuthModule,
     HttpClientModule,
     FormsModule,
-    AccordionModule
+    AccordionModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatInputModule,
+    MatSelectModule
     
   ],
   providers: [],

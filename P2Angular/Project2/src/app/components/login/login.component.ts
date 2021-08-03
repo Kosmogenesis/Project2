@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
         this.ROUTE.navigate(['home']);
       }, err => {
         console.log('login failed')
+        this.ROUTE.navigate(['login-failed'])
         //this.incorrect = true;
         // this.loginService.dbUser = this.validateUser;
         // this.ROUTE.navigate(['dashboard']);

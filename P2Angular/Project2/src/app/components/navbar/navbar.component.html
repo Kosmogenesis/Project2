@@ -34,7 +34,7 @@
                 <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink="active" routerLink="home">Home</a></li>
                 <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink = "active" routerLink = "view-cards">View Your Cards</a></li>
                 <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink="active" routerLink="createcard">Create a Card</a></li>
-                <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" routerLink = "active" routerLink = "take-a-test">Take A Test</a></li>
+                <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" href="take-a-test">Take A Test</a></li>
                 <li>
                     <hr class="dropdown-divider" *ngIf="loginService.isUserLoggedIn()" >
                 </li>

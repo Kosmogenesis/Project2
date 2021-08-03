@@ -20,6 +20,8 @@ export class SignupService {
   public registerUser(user: any): Observable<Users>{
     return this.http.post<Users>("http://localhost:8080/Project2/signup", user, HTTP_OPTIONS);
   }
+
+  
 }
 
 

@@ -8,9 +8,11 @@ import { HomeComponent } from './components/home/home.component';
 
 
 import { LoginComponent } from './components/login/login.component';
+import { LoginfailedComponent } from './components/loginfailed/loginfailed.component';
 import { LogoutComponent } from './components/logout/logout.component';
 // import { QuizComponent } from './components/quiz/quiz.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SignupfailedComponent } from './components/signupfailed/signupfailed.component';
 import { TakeATestComponent } from './components/take-a-test/take-a-test.component';
 import { ViewCardsComponent } from './components/view-cards/view-cards.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -65,6 +67,16 @@ const routes: Routes = [
   {
     path:'createcard', //the empty String makes this component appear given the base URL (on launch)
     component:CreatecardComponent //so when I go to localhost:4200, we'll get this component
+  },
+
+   {
+    path:'login-failed', //the empty String makes this component appear given the base URL (on launch)
+    component:LoginfailedComponent //so when I go to localhost:4200, we'll get this component
+  },
+   
+   {
+    path:'signup-failed', //the empty String makes this component appear given the base URL (on launch)
+    component:SignupfailedComponent //so when I go to localhost:4200, we'll get this component
   },
   
   // {
