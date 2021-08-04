@@ -33,6 +33,10 @@ public class CardService {
 		return cDAO.getAllRedCards(3);
 	}
 	
+	
+	
+	
+	
 	public List<Cards> getCardsByUser1(){
 		return cDAO.getCardsByUser1(1);
 	}
@@ -44,6 +48,10 @@ public class CardService {
 	public List<Cards> getCardsByUser3(){
 		return cDAO.getCardsByUser3(3);
 	}
+	
+	
+	
+	
 	
 	public List<Cards> getAllGreenCardsByUser1(){
 		return cDAO.getAllGreenCardsByUser1(1, 1);
@@ -80,6 +88,87 @@ public class CardService {
 	public List<Cards> getAllRedCardsByUser3(){
 		return cDAO.getAllRedCardsByUser3(3, 3);
 	}
+	
+	
+	
+	
+	
+	public List<Cards> getAllCardsByMath(){
+		return cDAO.getAllCardsByMath("Math");
+	}
+	
+	public List<Cards> getAllCardsByHistory(){
+		return cDAO.getAllCardsByHistory("History");
+	}
+	
+	public List<Cards> getAllCardsByComputerScience(){
+		return cDAO.getAllCardsByComputerScience("Computer Science");
+	}
+	
+//	public List<Cards> getAllCardsByGeography(){
+//		return cDAO.getAllCardsByGeography("Geography");
+//	}
+	
+	public List<Cards> getAllCardsByPhysics(){
+		return cDAO.getAllCardsByPhysics("Physics");
+	}
+	
+	public boolean deleteCardsById(int card_id) {
+		return cDAO.deleteCardById(card_id);
+	}
+	
+	public void updateCardStatus(Cards card) {
+		cDAO.updateCardStatus(card);
+	}
+	
+	
+	
+	
+	
+	
+	
+	public List<Cards> getAllMathCardsFromUser1(){
+		return cDAO.getAllMathCardsFromUser1(1);
+	}
+	
+	public List<Cards> getAllMathCardsFromUser2(){
+		return cDAO.getAllMathCardsFromUser2(2);
+	}
+	
+	
+	
+	
+	
+	
+	public List<Cards> getAllHistoryCardsFromUser1(){
+		return cDAO.getAllHistoryCardsFromUser1(1);
+	}
+	
+	public List<Cards> getAllHistoryCardsFromUser2(){
+		return cDAO.getAllHistoryCardsFromUser2(2);
+	}
+	
+	public List<Cards> getAllCSCardsFromUser1(){
+		return cDAO.getAllCSCardsFromUser1(1);
+	}
+	
+	public List<Cards> getAllCSCardsFromUser2(){
+		return cDAO.getAllCSCardsFromUser2(2);
+	}
+	
+	public List<Cards> getAllCSCardsFromUser3(){
+		return cDAO.getAllCSCardsFromUser3(3);
+	}
+	
+	public List<Cards> getAllPhysicsCardsFromUser1(){
+		return cDAO.getAllPhysicsCardsFromUser1(1);
+	}
+	
+	public List<Cards> getAllPhysicsCardsFromUser2(){
+		return cDAO.getAllPhysicsCardsFromUser2(2);
+	}
+	
+	
 	
 //	public List<Cards> getCardsFromUser(){
 //		return cDAO.getCardsFromUser(null);

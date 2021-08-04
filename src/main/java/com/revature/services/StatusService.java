@@ -16,5 +16,9 @@ public class StatusService {
 		return sDAO.getStatusById(status_id);
 	}
 	
+	public void updateStatus(Status status) {
+		sDAO.updateStatus(status);
+	}
+	
 	
 }

@@ -149,6 +149,72 @@ public class MasterServlet extends HttpServlet {
 			break;
 		}
 		
+		case "getAllCardsByMath":{
+			cc.getAllByMath(req, res);
+			break;
+		}
+		
+		case "getAllCardsByHistory":{
+			cc.getAllByHistory(req, res);
+			break;
+		}
+		
+		case "getAllCardsByCS":{
+			cc.getAllByComputerScience(req, res);
+			break;
+		}
+		
+		case "getAllCardsByPhysics":{
+			cc.getAllByPhysics(req, res);
+			break;
+		}
+		
+		
+		case "getAllMathCardsFromUser1":{
+			cc.getAllMathCardsFromUser1(req, res);
+			break;
+		}
+		
+		case "getAllMathCardsFromUser2":{
+			cc.getAllMathCardsFromUser2(req, res);
+			break;
+		}
+		
+		case "getAllHistoryCardsFromUser1":{
+			cc.getAllHistoryCardsFromUser1(req, res);
+			break;
+		}
+		
+		case "getAllHistoryCardsFromUser2":{
+			cc.getAllHistoryCardsFromUser2(req, res);
+			break;
+		}
+		
+		case "getAllCSCardsFromUser1":{
+			cc.getAllCSCardsFromUser1(req, res);
+			break;
+		}
+		
+		case "getAllCSCardsFromUser2":{
+			cc.getAllCSCardsFromUser2(req, res);
+			break;
+		}
+		
+		case "getAllCSCardsFromUser3":{
+			cc.getAllCSCardsFromUser3(req, res);
+			break;
+		}
+		
+		case "getAllPhysicsCardsFromUser1":{
+			cc.getAllPhysicsCardsFromUser1(req, res);
+			break;
+		}
+		
+		case "getAllPhysicsCardsFromUser2":{
+			cc.getAllCSCardsFromUser2(req, res);
+			break;
+		}
+		
 		
 		
 		}			

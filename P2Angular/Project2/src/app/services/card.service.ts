@@ -24,6 +24,11 @@ export class CardService {
     return this.http.post<Cards>("http://localhost:8080/Project2/createcard", card, HTTP_OPTIONS);
   }
 
+   changeStatus(card: any): Observable<Cards>{
+    return this.http.post<Cards>("http://localhost:8080/Project2/updatestatus", card, HTTP_OPTIONS);
+  }
+
+
   getCardsByUser1(): Observable<Cards[]>{
     return this.http.get<Cards[]>("http://localhost:8080/Project2/getCardsByUser1", HTTP_OPTIONS);
   }
@@ -46,7 +51,35 @@ export class CardService {
   
    getAllRedCards(): Observable<Cards[]>{
     return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllRedCards", HTTP_OPTIONS);
+   }
+  
+   getAllMathCards(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllCardsByMath", HTTP_OPTIONS);
+   }
+  
+  getAllHistoryCards(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllCardsByHistory", HTTP_OPTIONS);
   }
+  
+  getAllPhysicsCards(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllCardsByPhysics", HTTP_OPTIONS);
+  }
+  
+  getAllCSCards(): Observable<Cards[]>{
+    return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllCardsByCS", HTTP_OPTIONS);
+   }
+  
+  //  getAllRedCards(): Observable<Cards[]>{
+  //   return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllRedCards", HTTP_OPTIONS);
+  //  }
+  
+  //  getAllRedCards(): Observable<Cards[]>{
+  //   return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllRedCards", HTTP_OPTIONS);
+  //  }
+  
+  //  getAllRedCards(): Observable<Cards[]>{
+  //   return this.http.get<Cards[]>("http://localhost:8080/Project2/getAllRedCards", HTTP_OPTIONS);
+  // }
 
 
 

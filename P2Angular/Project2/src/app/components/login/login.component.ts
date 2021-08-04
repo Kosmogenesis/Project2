@@ -47,12 +47,17 @@ export class LoginComponent implements OnInit {
     }
     this.loginService.validLoginUser(validateUser).subscribe(
       succ => {
-        console.log('login success')
-        //this.dbUser = succ;
-        //this.incorrect = false;
-        //this.loginService.saveUser(succ);
-        sessionStorage.setItem('username', this.username)
-        this.ROUTE.navigate(['home']);
+        if (this.username == "" || this.password == "") {
+          console.log("field is null")
+          this.ROUTE.navigate(['login-failed'])
+        } else {
+          console.log('login success')
+          //this.dbUser = succ;
+          //this.incorrect = false;
+          //this.loginService.saveUser(succ);
+          sessionStorage.setItem('username', this.username)
+          this.ROUTE.navigate(['home']);
+        }
       }, err => {
         console.log('login failed')
         this.ROUTE.navigate(['login-failed'])

@@ -25,12 +25,13 @@ usernameNow = sessionStorage.getItem('username')
   constructor(private router: Router, private cs: CardService) { }
 
   ngOnInit(): void {
-     this.getCards();
+    this.getCards();
+    // this.getCards2();
     this.usernameNow;
   }
 
   getCards(): void {
-    this.cs.getAllCards().subscribe(
+    this.cs.getCardsByUser1().subscribe(
       data => {
         this.cards = data;
         this.testAmt = this.cards.length;
@@ -48,7 +49,7 @@ usernameNow = sessionStorage.getItem('username')
     if(this.index >= this.testAmt){
       this.moreQ = false;
     }
-    this.cs.getAllCards().subscribe(
+    this.cs.getCardsByUser1().subscribe(
       data => {
         this.cards = data;
         this.card = data[this.index];
@@ -61,12 +62,12 @@ usernameNow = sessionStorage.getItem('username')
   }
 
   rightCards(): void {
-    this.score += 100
+    this.score += 1
      this.index+=1
     if(this.index >= this.testAmt){
       this.moreQ = false;
     }
-    this.cs.getAllCards().subscribe(
+    this.cs.getCardsByUser1().subscribe(
       data => {
         this.cards = data;
         this.card = data[this.index];
@@ -84,7 +85,7 @@ usernameNow = sessionStorage.getItem('username')
     if (this.index >= this.testAmt) {
       this.moreQ = false;
     }
-    this.cs.getAllCards().subscribe(
+    this.cs.getCardsByUser1().subscribe(
       data => {
         this.cards = data;
         this.card = data[this.index];
@@ -97,11 +98,28 @@ usernameNow = sessionStorage.getItem('username')
   }
 
   finishCards(): void {
-    alert("Your Score is " + this.score);
+    // alert("You scored " + this.score + " out of " + this.cards?.length + " correctly!")
+    if (this.score <= 5) {
+      alert("You scored " + this.score + " out of " + this.cards?.length + " correctly! \n\nYou need to study more!")
+    }
+    if (this.score > 5 && this.score <= 7) {
+      alert("You scored " + this.score + " out of " + this.cards?.length + " correctly! \n\nDecent try, but keep studying!")
+    }
+
+    if (this.score > 7 && this.score <= 10) {
+      alert("You scored " + this.score + " out of " + this.cards?.length + " correctly! \n\nGood job!")
+    }
     this.index = 0;
     this.score = 0;
     this.moreQ = true;
     this.getCards();
   }
+
+
+
+
+
+
+  
 
 }

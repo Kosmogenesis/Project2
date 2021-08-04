@@ -27,6 +27,22 @@ public class StatusDAO {
 		
 	}
 	
+	public void updateStatus(Status newStatus) {
+		//Open a hibernate Session object so that we can connect to the database
+		Session ses = HibernateUtil.getSession(); //there is some parallels between ConnectionUtil.getConnection() in JDBC!
+		Transaction tx = ses.beginTransaction();
+		
+		if(!tx.isActive()) {
+			tx.begin();
+		}
+		
+		ses.merge(newStatus); //use save method to insert into the data base it's a method for Insert fucntionality
+		tx.commit();
+		
+		HibernateUtil.closeSession(); //Close our Session (not super necessary here, but good practice)
+		
+	}
+	
 	
 //	@Override
 //	public void updateUser(User user) {

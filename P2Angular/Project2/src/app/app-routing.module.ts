@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CreatecardComponent } from './components/createcard/createcard.component';
+import { CsComponent } from './components/cs/cs.component';
 import { GreenComponent } from './components/green/green.component';
+import { HistoryComponent } from './components/history/history.component';
 
 import { HomeComponent } from './components/home/home.component';
 
@@ -11,11 +13,14 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginfailedComponent } from './components/loginfailed/loginfailed.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { MathComponent } from './components/math/math.component';
+import { PhysicsComponent } from './components/physics/physics.component';
 import { RedComponent } from './components/red/red.component';
 // import { QuizComponent } from './components/quiz/quiz.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SignupfailedComponent } from './components/signupfailed/signupfailed.component';
 import { StatusroomComponent } from './components/statusroom/statusroom.component';
+import { SubjectroomComponent } from './components/subjectroom/subjectroom.component';
 import { TakeATestComponent } from './components/take-a-test/take-a-test.component';
 import { ViewCardsComponent } from './components/view-cards/view-cards.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -101,7 +106,32 @@ const routes: Routes = [
    {
     path:'red', //the empty String makes this component appear given the base URL (on launch)
     component:RedComponent //so when I go to localhost:4200, we'll get this component
-  }
+  },
+   
+   {
+    path:'subject-room', //the empty String makes this component appear given the base URL (on launch)
+    component:SubjectroomComponent //so when I go to localhost:4200, we'll get this component
+  },
+   
+   {
+    path:'math', //the empty String makes this component appear given the base URL (on launch)
+    component:MathComponent //so when I go to localhost:4200, we'll get this component
+  },
+   
+   {
+    path:'cs', //the empty String makes this component appear given the base URL (on launch)
+    component:CsComponent //so when I go to localhost:4200, we'll get this component
+  },
+   
+   {
+    path:'history', //the empty String makes this component appear given the base URL (on launch)
+    component:HistoryComponent //so when I go to localhost:4200, we'll get this component
+  },
+   
+   {
+    path:'physics', //the empty String makes this component appear given the base URL (on launch)
+    component:PhysicsComponent //so when I go to localhost:4200, we'll get this component
+  },
   
   // {
   //   path:'quiz', //the empty String makes this component appear given the base URL (on launch)

@@ -31,4 +31,13 @@ public class StatusController {
 			response.setStatus(200);
 		}
 	}
+	
+	public void updateStatus(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		
+		Status statusList = ss.getStatusById(1);
+		String data = null;
+		
+		data = om.writeValueAsString(statusList);
+		response.setStatus(200);
+	}
 }

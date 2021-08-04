@@ -31,6 +31,54 @@ public class CardDAO {
 		
 	}
 	
+	public void deleteCards(Cards deleteCard) {
+		//Open a hibernate Session object so that we can connect to the database
+		Session ses = HibernateUtil.getSession(); //there is some parallels between ConnectionUtil.getConnection() in JDBC!
+		Transaction tx = ses.beginTransaction();
+		
+		if(!tx.isActive()) {
+			tx.begin();
+		}
+		
+		ses.delete(deleteCard); //use save method to insert into the data base it's a method for Insert fucntionality
+		tx.commit();
+		
+		HibernateUtil.closeSession(); //Close our Session (not super necessary here, but good practice)
+		
+	}
+	
+	
+	public void updateCardStatus(Cards card) {
+		//Open a hibernate Session object so that we can connect to the database
+		Session ses = HibernateUtil.getSession(); //there is some parallels between ConnectionUtil.getConnection() in JDBC!
+		Transaction tx = ses.beginTransaction();
+		
+		Cards card1 = (Cards) ses.createQuery("UPDATE Card SET card_status_id set = ?1 WHERE card__id = ?2").setParameter(1, 2).setParameter(2, card.getStatus());
+		
+		if(!tx.isActive()) {
+			tx.begin();
+		}
+		
+		ses.delete(card1); //use save method to insert into the data base it's a method for Insert fucntionality
+		tx.commit();
+		
+		HibernateUtil.closeSession(); //Close our Session (not super necessary here, but good practice)
+		
+	}
+	public boolean deleteCardById(int card_id) {
+		//get hibernate session
+		Session ses = HibernateUtil.getSession();
+		
+		//use get method to get reimbursement id
+		Cards cGone = ses.get(Cards.class,card_id);
+        
+		//use delete method
+		ses.delete(cGone);
+		HibernateUtil.closeSession();
+		return true;
+        
+	}
+	
 	
 //	@Override
 //	public void updateUser(User user) {
@@ -399,9 +447,207 @@ public List<Cards> getAllRedCardsByUser3(int card_status_id, int userId){
 	return returnList;
 }
 	
+
+public List<Cards> getAllMathCardsFromUser1(int userId){
 	
+	Session ses = HibernateUtil.getSession();
 	
+	List<Cards> cardList = getAllCardsByMath("Math");
 	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 1)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+	
+
+public List<Cards> getAllMathCardsFromUser2(int userId){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCardsByMath("Math");
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 2)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+	
+
+
+public List<Cards> getAllHistoryCardsFromUser1(int userId){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCardsByHistory("History");
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 1)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
+public List<Cards> getAllHistoryCardsFromUser2(int userId){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCardsByHistory("History");
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 2)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
+public List<Cards> getAllCSCardsFromUser1(int userId){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCardsByComputerScience("Computer Science");
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 1)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
+public List<Cards> getAllCSCardsFromUser2(int userId){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCardsByComputerScience("Computer Science");
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 2)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
+public List<Cards> getAllCSCardsFromUser3(int userId){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCardsByComputerScience("Computer Science");
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 3)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
+public List<Cards> getAllPhysicsCardsFromUser1(int userId){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCardsByPhysics("Physics");
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 1)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
+public List<Cards> getAllPhysicsCardsFromUser2(int userId){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCardsByPhysics("Physics");
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getUserId().getId() == 2)
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
 	
 	
 	
@@ -516,6 +762,118 @@ public List<Cards> getAllRedCardsByUser3(int card_status_id, int userId){
 		
 		return returnList;
 	}
+	
+	
+public List<Cards> getAllCardsByMath(String subject){
+		
+		Session ses = HibernateUtil.getSession();
+		
+		List<Cards> cardList = getAllCards();
+		
+		List<Cards> returnList = new ArrayList<>();
+		
+		for(Cards c : cardList)
+		{
+			
+			if(c.getSubject().getSubjectName().equals("Math"))
+			{
+				returnList.add(c);
+			}
+		}
+		
+		HibernateUtil.closeSession();
+		
+		return returnList;
+	}
+
+public List<Cards> getAllCardsByHistory(String subject){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCards();
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getSubject().getSubjectName().equals("History"))
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
+//public List<Cards> getAllCardsByGeography(String subject){
+//	
+//	Session ses = HibernateUtil.getSession();
+//	
+//	List<Cards> cardList = getAllCards();
+//	
+//	List<Cards> returnList = new ArrayList<>();
+//	
+//	for(Cards c : cardList)
+//	{
+//		
+//		if(c.getSubject().getSubjectName().equals("Geography"))
+//		{
+//			returnList.add(c);
+//		}
+//	}
+//	
+//	HibernateUtil.closeSession();
+//	
+//	return returnList;
+//}
+
+public List<Cards> getAllCardsByPhysics(String subject){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCards();
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getSubject().getSubjectName().equals("Physics"))
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
+public List<Cards> getAllCardsByComputerScience(String subject){
+	
+	Session ses = HibernateUtil.getSession();
+	
+	List<Cards> cardList = getAllCards();
+	
+	List<Cards> returnList = new ArrayList<>();
+	
+	for(Cards c : cardList)
+	{
+		
+		if(c.getSubject().getSubjectName().equals("Computer Science"))
+		{
+			returnList.add(c);
+		}
+	}
+	
+	HibernateUtil.closeSession();
+	
+	return returnList;
+}
+
 	
 	
 	

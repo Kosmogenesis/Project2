@@ -35,6 +35,11 @@ import { MatChipsModule } from '@angular/material/chips';
 import { LoginfailedComponent } from './components/loginfailed/loginfailed.component';
 import { SignupfailedComponent } from './components/signupfailed/signupfailed.component';
 import { StatusroomComponent } from './components/statusroom/statusroom.component';
+import { SubjectroomComponent } from './components/subjectroom/subjectroom.component';
+import { MathComponent } from './components/math/math.component';
+import { HistoryComponent } from './components/history/history.component';
+import { CsComponent } from './components/cs/cs.component';
+import { PhysicsComponent } from './components/physics/physics.component';
 
 
 
@@ -58,7 +63,12 @@ import { StatusroomComponent } from './components/statusroom/statusroom.componen
     RedComponent,
     LoginfailedComponent,
     SignupfailedComponent,
-    StatusroomComponent
+    StatusroomComponent,
+    SubjectroomComponent,
+    MathComponent,
+    HistoryComponent,
+    CsComponent,
+    PhysicsComponent
     // QuizComponent,
     
    
