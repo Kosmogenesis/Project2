@@ -24,3 +24,8 @@ Our mission was to create a flashcard app wherein a user can:
 * 2b. Import the project into your front end code editor 
 * 3a. Run the Tomcat server on the backend so that it can communicate with the front end
 * 3b. Run the command "ng serve -o" in your front end terminal to display the page
+
+# Contributors
+* Michael Carson
+* Gibral Raphael
+* Joe Idelson
