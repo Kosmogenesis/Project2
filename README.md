@@ -8,10 +8,10 @@ Our mission was to create a flashcard app wherein a user can:
 -Rate their understanding of each card
 -Test their knowledge by being quizzed
 # Technologies Used
--Angular
--Java
--Hibernate
--SQL Database
--JavaScript
--HTML/CSS/Bootstrap
+*Angular
+*Java
+*Hibernate
+*SQL Database
+*JavaScript
+*HTML/CSS/Bootstrap
 
