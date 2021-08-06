@@ -7,7 +7,7 @@ Our mission was to create a flashcard app wherein a user can:
 -Create a brand new flashcard
 -Rate their understanding of each card
 -Test their knowledge by being quizzed
-#Technologies Used
+# Technologies Used
 -Angular
 -Java
 -Hibernate
