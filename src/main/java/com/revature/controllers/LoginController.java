@@ -30,7 +30,7 @@ public void login(HttpServletRequest req, HttpServletResponse res) throws IOExce
 		
 		if(req.getMethod().equals("POST")) { //making sure we actually got a POST request before executing. 
 			
-			//this process below is to get our JSON String
+			//this process below is to get our JSON String..
 			
 			BufferedReader reader = req.getReader(); //BufferedReader reads text from an input string (in our case JSON)
 			
